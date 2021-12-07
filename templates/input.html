@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Character Generator</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+ <body>
+     <div style="display: flex;width: fit-content;">
+            {% for b in data %}
+            <div >  {{ b.title }}</div>
+            <a href="http://127.0.0.1:5000/api/book/{{ b.isbn }}">
+                <img src=   {{b.thumbnailUrl}}  >
+            </a> <br>
+            {% endfor %}
+     </div>
+
+ </body>
+</html>
